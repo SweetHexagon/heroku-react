@@ -25,6 +25,9 @@ app.get('/add_user', function(req, res) {
     users.addUser(req.query.last_name, req.query.first_name);
     res.end("User added");
 })
+app.get('/profile', function(req, res) {
+   res.end("Oleksii Sytnik")
+})
 
 const listener = app.listen(8080, 
 	() => console.log(`Listening on ${ listener.address().port }`));
